@@ -1,5 +1,7 @@
+from flask import request, jsonify
+
 from application import app
-from flask import request
+from application.user_service import UserService
 
 
 @app.route("/")
@@ -9,4 +11,8 @@ def test():
 
 @app.route("/save-user", methods=['POST'])
 def save_user():
-    return request.json
+    service_result = UserService().save_user(request.json)
+    if service_result:
+        return jsonify(str(service_result))
+    else:
+        return '0'

@@ -1,0 +1,1 @@
+LOCAL_SQLITE_FILENAME = 'db.sqlite3'

@@ -11,4 +11,5 @@ class User(db.Model):
     password = db.Column(db.String(60), nullable=False)
 
     def __repr__(self) -> str:
-        return super().__repr__()
+        return '[user_id=' + str(self.user_id) + ', user_first_name=' + self.user_first_name + ', user_last_name='\
+               + self.user_last_name + ']'
