@@ -14,9 +14,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 
-
-from application.models import User
-
+from application.models import User # noqa
 
 if os.environ.get('FLASK_ENV') == 'development' and not os.path.isfile(constants.LOCAL_SQLITE_FILENAME):
     db.create_all()

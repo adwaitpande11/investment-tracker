@@ -1,6 +1,2 @@
-from application import app
-from application import routes
-
-
-app = app
-routes = routes
+from application import app # noqa
+from application import routes # noqa
